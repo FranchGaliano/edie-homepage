@@ -1,95 +1,76 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image"
+import Nav from "../../components/nav/Nav"
+import hero from "../../public/heroImage.jpg"
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <Nav />
+      <section id="firstSection">
+        <div id="firstSection_top">
+          <div>
+            <p id="blueText">Unhappy with your website?</p>
+            <p id="textTitle">We create beautiful and fast web services</p>
+          </div>
+          <div>
+            <Image src={hero} alt="Hero" />
+          </div>
         </div>
-      </div>
+        <div id="firstSection_bottom">
+          <p>Story, emotion and purpose</p>
+          <p>We help transform your ideas into real world applications that will outperform your toughest competition and help you achieve your strategic goals in short period of time.</p>
+          <form id="firstSection_bottom_form">
+            <label htmlFor="email">Want us to contact you?</label>
+            <div>
+              <input type="text" placeholder="Email"/>
+              <button>Join</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section id="secondSection">
+        <h2>We offer high demand services</h2>
+        <div id="cards-container">
+          <div className="card">
+            <div id="box-pencil">
+              <span class="material-symbols-outlined" id="edit">edit</span>
+            </div>
+            <h3 className="card-title">
+              UI/UX Design
+            </h3>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.
+            </p>
+            <a href="#"> Get started </a>
+          </div>
+          <div className="card">
+            <div id="box-code">
+              <span class="material-symbols-outlined" id="code">code</span>
+            </div>
+            <h3 className="card-title">
+            Front End
+            </h3>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.
+            </p>
+            <a href="#"> Get started </a>
+          </div>
+          <div className="card">
+            <div id="box-storage">
+              <span class="material-symbols-outlined" id="storage">storage</span>
+            </div>
+            <h3 className="card-title">
+              UI/UX Design
+            </h3>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.
+            </p>
+            <a href="#"> Get started </a>
+          </div>
+        </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </section>
     </main>
   )
 }
